@@ -1,0 +1,29 @@
+﻿/*
+------------------------------------------
+2026. 2 화 34목34		화34  (3주 1일)
+------------------------------------------
+사용자 정의 자료형
+------------------------------------------
+*/
+
+
+#include<iostream>
+#include "save.h"
+using namespace std;
+
+struct Point2D{  
+	int x{};
+	int y{};
+	Point2D() = default;
+
+};
+
+
+int main()
+{
+	save("소스.cpp");
+
+	Point2D a;
+
+	cout << a.x << ", " << a.y << endl;
+}

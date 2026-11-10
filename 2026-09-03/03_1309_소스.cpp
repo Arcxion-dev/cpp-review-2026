@@ -1,0 +1,23 @@
+﻿/*
+------------------------------------------
+2026. 2 화 34목34		화34  (1주 1일)
+------------------------------------------
+save 기능을 파일로 분리
+다음 시간 - 입출력 연습
+------------------------------------------
+*/
+
+
+
+#include "save.h"
+#include<iostream>
+
+int main() {
+
+	//  ::	-> scope resolution operator
+	//std::cout << "Hello World" << std::endl;
+	//std::cout << "Hello World" << "\n";
+
+	save("소스.cpp"); // 기본적으론 char, 하지만 우린 str을 원해
+	return 0;
+}
