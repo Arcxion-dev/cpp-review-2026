@@ -7,7 +7,9 @@
 //2026년 11월 5일 - 객체 고유 번호 부여
 //2026년 11월 5일 - 연산자 오버로딩 시작 + 
 //2026년 11월 5일 - 출력연산자 오버로딩 - friend로 코딩한다
-//2026년 11월 5일 - 멤버가 아닌 연산자 함수 - friend로 코딩한다
+//2026년 11월 10일 - 멤버가 아닌 연산자 함수 - friend로 코딩한다
+//2026년 11월 12일 - class 연산자 오버로딩 [] , ()
+//2026년 11월 17일 - 이동문법 지원
 //-----------------------------------------
 
 
@@ -26,19 +28,22 @@ public:
 	Xtring(const Xtring& other);												// 3 - 복사생성자
 	Xtring& operator=(const Xtring& other);										// 4 - 복사할당연산자
 
-	Xtring(Xtring&& other) = default;											// 5 - 이동생성자
-	Xtring& operator = (Xtring&&/*right value reference로 읽는다*/) = default;	// 6 - 이동할당연산자
+	Xtring(Xtring&& other);														// 5 - 이동생성자
+	Xtring& operator = (Xtring&&/*right value reference로 읽는다*/);			// 6 - 이동할당연산자
+
 
 	Xtring operator+(const Xtring& rhs) const;
 
 
+	char operator[](size_t idx) const;
+	char& operator[](size_t idx); //const 유무로 오버로딩을 구분한다
 
 
-	size_t size();
+	size_t size() const;														//2026.11.17 const
 
 
 	void show(const char*);														// 모든 관찰가능한 내용을 다 적도록 하겠다.
-
+	
 	
 
 private:
