@@ -38,7 +38,7 @@
 | [11-10 (화)](2026-11-10) | 연산자 오버로딩 | `"올해는" + a` (멤버가 아닌 `operator+`), `INT` 전위/후위 `++`, Xtring 멤버를 가진 `Dog` 출력 |
 | [11-12 (목)](2026-11-12) | class 객체의 파일 입출력 → 연산자 오버로딩 `[]` | 랜덤 Dog 100마리 `개들.txt` 저장, **[시험문제] 개들.txt 읽기 + 나이순 qsort**, `operator[]` (const 유무로 오버로딩), `qsort(&s[0], ...)` |
 | [11-17 (화)](2026-11-17) | move semantic 구현 | `string b = move(a)` (이동 후 a 는 UB), Xtring 이동생성/이동할당 직접 구현, `new Xtring[num]` + 길이순 `std::sort`, `()` 오버로딩 (function object) + `sort(begin(a), end(a), dog)` |
-| [11-19 (목)](2026-11-19) | 입력 연산자 → 상속 (Inheritance) | Xtring `operator>>`, **[문제] 숫자를 `*` 로 표시하는 `StarXtring : public Xtring`**, `Animal` / `Dog : public Animal` (부모 생성자 호출) |
+| [11-19 (목)](2026-11-19) | 입력 연산자 → 상속 (Inheritance) | Xtring `operator>>`, **[문제] 숫자를 `*` 로 표시하는 `StarXtring : public Xtring`**, `Animal` / `Dog : public Animal` (부모 생성자 호출), 생성 부모→자식 / 소멸 자식→부모 |
 
 ## 시험대비_버그수정
 
